@@ -4,8 +4,10 @@
   "description": "web db sprint",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
+
   "repository": "https://github.com/antonynyagah/webdb-challenge.git",
   "author": "antony nyagah",
   "license": "MIT",
