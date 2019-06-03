@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "web db sprint",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": "https://github.com/antonynyagah/webdb-challenge.git",
   "author": "antony nyagah",
   "license": "MIT",
@@ -14,3 +17,4 @@
     "sqlite3": "^4.0.8"
   }
 }
+
