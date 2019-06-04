@@ -15,7 +15,7 @@ server.use('/api/project', projectRouter);
 
 //check
 server.get('/', (req, res) => {
-  res.send('server running!')
+  res.send('Hello World!')
 });
 
 

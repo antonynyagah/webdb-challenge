@@ -37,16 +37,19 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
-  // get the projects from the database
-  try {
-    const project = await db('projects')
-      .where({ id: req.params.id })
-      .first();
-    res.status(200).json(project);
-  } catch (error) {
-    res.status(500).json(error);
-  }
+router.get('/:id', (req, res) => {
+  const {id} = req.params;
+  db('projects')
+    .where({id: id})
+    .first()
+    .then(projects => {
+      db('actions')
+        .where({project_id: id}).then(actions => {
+        (projects.actions = actions);
+        return res.status(200).json(projects);
+      });
+    })
 });
 
-module.exports = router;
+
+module.exports = router
